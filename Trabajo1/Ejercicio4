@@ -1,0 +1,26 @@
+fun main() {
+    val numeroSecreto = (1..30).random()
+    var intentos = 0
+    var adivinado = false
+
+    println("Adivina el número (entre 1 y 30). Tienes 5 intentos.")
+
+    while (intentos < 5 && !adivinado) {
+        print("Intento ${intentos + 1}: ")
+        val numero = readln().toInt()
+        intentos++
+
+        when {
+            numero == numeroSecreto -> {
+                println("¡Felicidades! Adivinaste el número.")
+                adivinado = true
+            }
+            numero < numeroSecreto -> println("El número es mayor.")
+            else -> println("El número es menor.")
+        }
+    }
+
+    if (!adivinado) {
+        println("Game Over. El número secreto era $numeroSecreto")
+    }
+}

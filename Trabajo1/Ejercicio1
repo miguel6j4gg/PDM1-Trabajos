@@ -1,0 +1,21 @@
+
+fun main() {
+    print("Ingrese su salario mensual: ")
+    val salario = readln().toDouble()
+
+    print("Ingrese su puntuación (0 a 10): ")
+    val puntuacion = readln().toInt()
+
+    val nivel = when (puntuacion) {
+        in 0..3 -> "Inaceptable"
+        in 4..6 -> "Aceptable"
+        in 7..10 -> "Meritorio"
+        else -> "Valor inválido"
+    }
+
+    val dinero = salario * (puntuacion / 10.0)
+
+    println("Nivel de rendimiento: $nivel")
+    println("Cantidad de dinero recibido: $${"%.2f".format(dinero)}")
+}
+

@@ -1,0 +1,19 @@
+fun main() {
+    val opciones = listOf("Piedra", "Papel", "Tijera")
+    val computadora = opciones.random()
+
+    println("Elija una opción: Piedra, Papel o Tijera")
+    val usuario = readln().trim().capitalize()
+
+    println("Computadora eligió: $computadora")
+
+    val resultado = when {
+        usuario == computadora -> "Empate"
+        usuario == "Piedra" && computadora == "Tijera" -> "Ganaste"
+        usuario == "Papel" && computadora == "Piedra" -> "Ganaste"
+        usuario == "Tijera" && computadora == "Papel" -> "Ganaste"
+        else -> "Perdiste"
+    }
+
+    println("Resultado: $resultado")
+}

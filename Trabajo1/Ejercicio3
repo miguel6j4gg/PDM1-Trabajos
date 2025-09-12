@@ -1,0 +1,34 @@
+fun main() {
+    var opcion: Int
+
+    do {
+        println("==== Menú ====")
+        println("1. Suma")
+        println("2. Resta")
+        println("3. Multiplicación")
+        println("4. División")
+        println("5. Salir")
+        print("Seleccione una opción: ")
+        opcion = readln().toInt()
+
+        if (opcion in 1..4) {
+            print("Ingrese primer número: ")
+            val num1 = readln().toDouble()
+            print("Ingrese segundo número: ")
+            val num2 = readln().toDouble()
+
+            val resultado = when (opcion) {
+                1 -> num1 + num2
+                2 -> num1 - num2
+                3 -> num1 * num2
+                4 -> if (num2 != 0.0) num1 / num2 else "No se puede dividir entre 0"
+                else -> ""
+            }
+            println("Resultado: $resultado")
+        } else if (opcion != 5) {
+            println("Opción no válida")
+        }
+    } while (opcion != 5)
+
+    println("¡Adiós!")
+}
