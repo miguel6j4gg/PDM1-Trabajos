@@ -1,0 +1,37 @@
+¿Qué sucede si no usamos onSaveInstanceState? ¿Por qué se pierde el contador?
+
+Si no usas onSaveInstanceState, cuando la actividad se destruye (por ejemplo al rotar la pantalla o cuando el sistema libera memoria), la variable contador se reinicia a 0.
+
+Esto ocurre porque las variables en memoria RAM desaparecen al destruir la Activity, y al crear una nueva instancia ya no recuerda el valor anterior.
+
+Con onSaveInstanceState, guardamos ese valor en un Bundle y lo recuperamos en onRestoreInstanceState, así el contador sigue donde estaba.
+
+----------------
+
+2️⃣ ¿Por qué Android destruye y vuelve a crear la Activity al rotar la pantalla?
+
+Al rotar la pantalla, cambian características físicas de la interfaz (ejemplo: de vertical a horizontal, cambia el tamaño y disposición de los elementos).
+
+Android decide destruir y recrear la Activity para que el sistema cargue de nuevo los recursos correctos (layouts adaptados, imágenes, etc.).
+
+Esto asegura que tu app se adapte automáticamente a cualquier orientación.
+
+------------------------
+
+3️⃣ ¿En qué casos prácticos usarías onPause y onStop en una aplicación real?
+
+onPause() → cuando la Activity todavía es visible pero ya no está en primer plano.
+
+Ejemplo práctico:
+
+Una app de música → en onPause podrías pausar la canción si el usuario abre otra app.
+
+Una app de cámara → en onPause apagas la vista previa de la cámara.
+
+onStop() → cuando la Activity ya no es visible.
+
+Ejemplo práctico:
+
+Guardar datos temporales en base de datos o preferencias antes de que el usuario deje la app.
+
+En una app de chat, podrías detener actualizaciones en segundo plano para ahorrar batería.
