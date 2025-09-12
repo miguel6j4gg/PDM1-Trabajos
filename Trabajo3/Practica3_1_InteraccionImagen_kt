@@ -1,0 +1,18 @@
+package com.example.practica3_1   // <- AJUSTA AQUÍ si tu package es otro
+
+import android.os.Bundle
+import android.widget.ImageView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val miImagen = findViewById<ImageView>(R.id.miImagen)
+        miImagen.setOnClickListener {
+            Toast.makeText(this, "¡Has hecho clic en la imagen!", Toast.LENGTH_SHORT).show()
+        }
+    }
+}
