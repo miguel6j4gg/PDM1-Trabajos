@@ -40,7 +40,7 @@ class _VistaEditarPerfilState extends State<VistaEditarPerfil> {
             ElevatedButton.icon(
               onPressed: () {
                 final nombre = _controlador.text.trim();
-                Navigator.pop(context, nombre); // 👈 Regresa el valor
+                Navigator.pop(context, nombre); 
               },
               icon: const Icon(Icons.save),
               label: const Text('Guardar cambios'),
@@ -56,3 +56,4 @@ class _VistaEditarPerfilState extends State<VistaEditarPerfil> {
     );
   }
 }
+
