@@ -20,7 +20,7 @@ class _VistaNavegacionState extends State<VistaNavegacion> {
     VistaInicio(),
     VistaPerfil(),
     VistaHobbies(),
-    VistaPerfil(), // 👈 cuarto tab (perfil extra)
+    VistaPerfil(), 
   ];
 
 
@@ -41,9 +41,10 @@ class _VistaNavegacionState extends State<VistaNavegacion> {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Hobbies'),
-          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Usuario'), // 👈 cuarto tab
+          BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Usuario'), 
         ],
       ),
     );
   }
 }
+
