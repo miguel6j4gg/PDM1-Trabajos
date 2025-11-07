@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'vista_inicio.dart';
 import 'vista_perfil.dart';
 import 'vista_hobbies.dart';
-import 'vista_navegacion.dart'; // 👈 AGREGA ESTA IMPORTACIÓN
+import 'vista_navegacion.dart'; 
 
 
 void main() {
