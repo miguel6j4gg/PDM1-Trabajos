@@ -2,7 +2,7 @@
 // Pantalla de perfil con imagen, nombre, descripción e información de contacto.
 
 import 'package:flutter/material.dart';
-import 'vista_editar_perfil.dart'; // 👈 NUEVO IMPORT
+import 'vista_editar_perfil.dart'; 
 
 class VistaPerfil extends StatefulWidget {
   const VistaPerfil({super.key});
@@ -54,7 +54,7 @@ class _VistaPerfilState extends State<VistaPerfil> {
             _infoContacto(Icons.location_on, 'Arequipa, Perú'),
             const SizedBox(height: 28),
             ElevatedButton.icon(
-              onPressed: _editarPerfil, // 👈 acción de editar
+              onPressed: _editarPerfil, 
               icon: const Icon(Icons.edit),
               label: const Text('Editar perfil'),
               style: ElevatedButton.styleFrom(
@@ -97,3 +97,4 @@ class _VistaPerfilState extends State<VistaPerfil> {
     );
   }
 }
+
